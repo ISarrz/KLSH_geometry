@@ -3,217 +3,87 @@
 \begin{document}
     \begin{center}
         \textbf{Сферическая геометрия №5}\\
-        Теорема косинусов, теорема синусов.
+        Координаты.
     \end{center}
 
     \begin{center}
         \textbf{№ 1}
     \end{center}
 
-    На сфере радиуса $R$ дан треугольник с сторонами $a, b, c$ найдите его площадь.
+    Вы бедный штурман, которому поручили вычислить направления пути в формате Юг/Север-Запад/Восток
+    на протяжении всего пути, заданного координатами.
+    Найдите направления, в каком полушарии лежит маршрут, задайте координаты в терминах широты и долготы, если даны следующие координаты:\\
+    $56, 92$; $53, 92$; $52, 91$; $54, 95$
 
     \textbf{Решение}\\
 
-    \begin{center}
-        \includegraphics[width=0.2\textwidth]{images/img3}\\
-    \end{center}
+    Весь маршрут лежит в северной широте и восточной долготе.\\
+    Направления: ЮГ, Юго-Запад, Северо-Восток.\\
 
-    1) По сферической теореме косинусов:
-    \[
-        \begin{cases}
-            \cos \frac{a}{R} = \cos \frac{b}{R}\cos\frac{c}{R} + \sin \frac{b}{R}\sin\frac{c}{R}\cos A\\
-            \cos \frac{b}{R} = \cos \frac{a}{R}\cos\frac{c}{R} + \sin \frac{a}{R}\sin\frac{c}{R}\cos B\\
-            \cos \frac{c}{R} = \cos \frac{a}{R}\cos\frac{b}{R} + \sin \frac{a}{R}\sin\frac{b}{R}\cos C\\
-        \end{cases}
-        \rightarrow
-    \]
-    \[
-        \begin{cases}
-            \cos A = \frac{\cos \frac{a}{R} - \cos \frac{b}{R}\cos\frac{c}{R}}{\sin \frac{b}{R}\sin\frac{c}{R}}\\
-            \cos B = \frac{\cos \frac{b}{R} - \cos \frac{a}{R}\cos\frac{c}{R}}{\sin \frac{a}{R}\sin\frac{c}{R}}\\
-            \cos C = \frac{\cos \frac{c}{R} - \cos \frac{a}{R}\cos\frac{b}{R}}{\sin \frac{a}{R}\sin\frac{b}{R}}\\
-        \end{cases}
-    \]
-
-    2) Следовательно площадь равна:
-    \[
-        S = R^2\left(\arccos \frac{\cos \frac{a}{R} - \cos \frac{b}{R}\cos\frac{c}{R}}{\sin \frac{b}{R}\sin\frac{c}{R}} -
-        + \arccos  \frac{\cos \frac{b}{R} - \cos \frac{a}{R}\cos\frac{c}{R}}{\sin \frac{a}{R}\sin\frac{c}{R}}
-        + \arccos \frac{\cos \frac{c}{R} - \cos \frac{a}{R}\cos\frac{b}{R}}{\sin \frac{a}{R}\sin\frac{b}{R}}\\
-        \pi\right)
-    \]
 
     \begin{center}
         \textbf{№ 2}
     \end{center}
 
-    На сфере радиуса $R$ дан треугольник со сторонами $a, b, c$.
-    Угол между $a$ и $b$ равен $C$.
-    Найдите чему равна сторона $c$, если радиус сферы $R$.
+    Жители Москвы, которая имеет координаты $55.75;$ $37.62$ решили послать
+    жителям Чикаго, расположенного по координатам $41.87$; $-87.62$ подарки под новый год,
+    но это желание пришло им слишком поздно, когда до нового года оставалось всего пол часа,
+    поэтому самолет долететь точно не успеет, однако жителям москвы стало интересно,
+    сможет ли межконтинентальная баллистическая ракета РС-28 «Сармат», имеющая максимальную дальность
+    полета 18 000 км и скорость около 6 км/с доставить подарки к новому году вовремя?
+    Радиус земли считайте 6400 км.
 
     \textbf{Решение}\\
 
-    \begin{center}
-        \includegraphics[width=0.2\textwidth]{images/img4}\\
-    \end{center}
+    \[
+        \phi_1 = 55.75^{\circ}, \lambda_1 = 37.62^{\circ}
+    \]
+    \[
+        \phi_2 = 41.87^{\circ}, \lambda_2 = -87.62^{\circ}
+    \]
+    \[
+        \phi_1 = 0.973, \phi_2 = 0.731
+    \]
+    \[
+        \lambda_1 = 0.657, \lambda_2 = -1.529
+    \]
+    \[
+        \cos \frac{d}{R} = \sin \phi_1 \sin \phi_2 + \cos\phi_1\cos\phi_2 \cos\delta\lambda =
+        0.311
+    \]
+    \[
+        \frac{d}{R} = 1.256
+    \]
+    \[
+        d = 8040 \text{ км}
+    \]
+    \[
+        \frac{8040}{6} = 1340 \text{ секунд} = 22.3 \text{ минут}
+    \]
 
-    1) По сферической теореме косинусов:
-    \[
-        \cos \frac{c}{R} = \cos\frac{a}{R}\cos\frac{b}{R} + \sin\frac{a}{R}\sin\frac{b}{R}\cos C
-    \]
-    \[
-        \frac{c}{R} = \arccos\left( \cos\frac{a}{R}\cos\frac{b}{R} + \sin\frac{a}{R}\sin\frac{b}{R}\cos C\right)
-    \]
-    \[
-        c = R\arccos\left( \cos\frac{a}{R}\cos\frac{b}{R} + \sin\frac{a}{R}\sin\frac{b}{R}\cos C\right)
-    \]
+    Ответ: межконтинентальная баллистическая ракета РС‑28 «Сармат» с дальностью
+    18000 км и скоростью около 6 км/с способна доставить подарки к Новому году.
 
     \begin{center}
         \textbf{№ 3}
     \end{center}
 
-    Через боковые стороны равнобедренного сферического треугольника провели среднюю линию.
-    Найдите длину средней линии, если известны стороны исходного треугольника и угол противолежащий основанию.
+    Найдите центральный угол, опирающийся на дугу, заданную двумя точками с известными координатами
 
     \textbf{Решение}\\
 
-    \begin{center}
-        \includegraphics[width=0.2\textwidth]{images/img5}\\
-    \end{center}
-
-    1) По теореме косинусов в $\triangle PAM$
     \[
-        \cos \frac{PM}{R} = \cos \frac{AP}{R}\cos\frac{AM}{R} + \sin\frac{AP}{R}\sin\frac{AM}{R}\cos A
-    \]
-    \[
-        PM = R\arccos \left(\cos \frac{AP}{R}\cos\frac{AM}{R} + \sin\frac{AP}{R}\sin\frac{AM}{R}\cos A\right) =
-    \]
-    \[
-        R\arccos \left(\cos \frac{AB}{2R}\cos\frac{AC}{2R} + \sin\frac{AB}{2R}\sin\frac{AC}{2R}\cos A\right) =
+        \arccos( \sin \phi_1 \sin \phi_2 + \cos\phi_1\cos\phi_2 \cos\delta\lambda)
     \]
 
     \begin{center}
         \textbf{№ 4}
     \end{center}
 
-    Через боковые стороны равнобедренного сферического треугольника провели среднюю линию.
-    Найдите углы получившегося треугольника, если известны стороны исходного треугольника и угол противолежащий основанию.
+    Докажите, что в стереографической проекции сохраняются углы.
 
     \textbf{Решение}\\
 
-    \begin{center}
-        \includegraphics[width=0.2\textwidth]{images/img6}\\
-    \end{center}
-
-    1) Рассмотрим $\triangle APM$:
-    \[
-        \begin{cases}
-            \cos \frac{AP}{R} = \cos \frac{PM}{R}\cos\frac{AM}{R} + \sin \frac{PM}{R}\sin\frac{AM}{R}\cos M\\
-            \cos \frac{AM}{R} = \cos \frac{AP}{R}\cos\frac{PM}{R} + \sin \frac{AP}{R}\sin\frac{PM}{R}\cos P\\
-            \cos \frac{PM}{R} = \cos \frac{AP}{R}\cos\frac{AM}{R} + \sin \frac{AP}{R}\sin\frac{AM}{R}\cos A\\
-        \end{cases}
-        \rightarrow
-    \]
-    \[
-        \begin{cases}
-            M = \arccos \frac{\cos \frac{AP}{R} - \cos \frac{PM}{R}\cos\frac{AM}{R}}{\sin \frac{PM}{R}\sin\frac{AM}{R}}=
-            \arccos \frac{\cos \frac{AB}{2R} - \cos \frac{PM}{R}\cos\frac{AC}{2R}}{\sin \frac{PM}{R}\sin\frac{AC}{2R}}\\
-            P = \arccos \frac{\cos \frac{AM}{R} -  \cos \frac{AP}{R}\cos\frac{PM}{R}}{\sin \frac{AP}{R}\sin\frac{PM}{R}}=
-            \arccos \frac{\cos \frac{AC}{2R} -  \cos \frac{AB}{2R}\cos\frac{PM}{R}}{\sin \frac{AB}{2R}\sin\frac{PM}{R}}\\
-            A = \arccos \frac{\cos \frac{PM}{R} - \cos \frac{AP}{R}\cos\frac{AM}{R}}{\sin \frac{AP}{R}\sin\frac{AM}{R}}=
-            \arccos \frac{\cos \frac{PM}{R} - \cos \frac{AB}{2R}\cos\frac{AC}{2R}}{\sin \frac{AB}{2R}\sin\frac{AC}{2R}}\\
-        \end{cases}
-    \]
-
-    Средняя линия была найдена в предыдущей задаче.
-
-    \begin{center}
-        \textbf{№ 5}
-    \end{center}
-
-    В сферическом треугольнике известны три стороны и один угол.
-    Найдите остальные углы.
-
-    \textbf{Решение}\\
-
-    \begin{center}
-        \includegraphics[width=0.2\textwidth]{images/img7}\\
-    \end{center}
-
-    1) По теореме синусов:
-    \[
-        \frac{\sin\frac{a}{R}}{\sin A} = \frac{\sin\frac{b}{R}}{\sin B} = \frac{\sin\frac{c}{R}}{\sin C}
-    \]
-    Пусть известен угол $A$, тогда:
-    \[
-        B = \frac{\sin \frac{b}{R}\sin A}{\sin\frac{a}{R}}
-    \]
-    \[
-        C = \frac{\sin\frac{c}{R}\sin A}{\sin\frac{a}{R}}
-    \]
-
-    \begin{center}
-        \textbf{№ 6}
-    \end{center}
-
-    В сферическом треугольнике $ABC$ угол $B$ прямой.
-    Найдите косинусы, синусы, тангенсы, котангенсы двух других углов,
-    если известны стороны треугольника и радиус сферы.
-
-    \textbf{Решение}\\
-
-    \begin{center}
-        \includegraphics[width=0.2\textwidth]{images/img8}\\
-    \end{center}
-
-    1) По теореме синусов:
-    \[
-        \frac{\sin\frac{a}{R}}{\sin A} = \frac{\sin\frac{b}{R}}{\sin B} = \frac{\sin\frac{c}{R}}{\sin C}
-    \]
-    \[
-        \sin A = \frac{\sin\frac{a}{R}}{\sin\frac{b}{R}}
-    \]
-    \[
-        \sin C = \frac{\sin\frac{c}{R}}{\sin\frac{b}{R}}
-    \]
-
-    2) По теореме косинусов:
-    \[
-        \begin{cases}
-            \cos\frac{a}{R} = \cos\frac{b}{R}\cos\frac{c}{R} + \sin\frac{b}{R}\sin\frac{c}{R}\cos A\\
-            \cos\frac{c}{R} = \cos\frac{a}{R}\cos\frac{b}{R} + \sin\frac{a}{R}\sin\frac{b}{R}\cos C\\
-        \end{cases}
-        \rightarrow
-    \]
-    \[
-        \begin{cases}
-            \cos A = \frac{\cos\frac{a}{R} - \cos\frac{b}{R}\cos\frac{c}{R}}{\sin\frac{b}{R}\sin\frac{c}{R}}\\
-            \cos C = \frac{\cos\frac{c}{R} - \cos\frac{a}{R}\cos\frac{b}{R}}{\sin\frac{a}{R}\sin\frac{b}{R}}\\
-        \end{cases}
-    \]
-
-     \begin{center}
-        \textbf{№ 7}
-    \end{center}
-
-    В сферическом треугольнике $ABC$ угол $B$ прямой.
-    Найдите сторону $AC$, если известны все углы, сторона $AB$ и радиус сферы.
-
-    \textbf{Решение}\\
-
-    \begin{center}
-        \includegraphics[width=0.2\textwidth]{images/img9}\\
-    \end{center}
-
-    1) По теореме синусов:
-    \[
-        \frac{\sin\frac{a}{R}}{\sin A} = \frac{\sin\frac{b}{R}}{\sin B} = \frac{\sin\frac{c}{R}}{\sin C}
-    \]
-    \[
-        \sin\frac{b}{R} = \frac{\sin\frac{c}{R}}{\sin C}
-    \]
-    \[
-        b = R\arcsin\left(\frac{\sin\frac{c}{R}}{\sin C}\right)
-    \]
-
+    Рассматриваем углы между касательных, показываем, что прямая проекции проходит
+    через касательные.
 \end{document}
